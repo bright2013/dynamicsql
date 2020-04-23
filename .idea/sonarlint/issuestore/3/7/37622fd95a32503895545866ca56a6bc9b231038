@@ -1,0 +1,13 @@
+
+N	java:S106d"9Replace this use of System.out or System.err by a logger.(ê¾ú®
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
+h
+java:S1192E"SDefine a constant instead of duplicating this literal "com.itheima.mapper" 3 times.(çŠË
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
+M	java:S106K"9Replace this use of System.out or System.err by a logger.(ıÅË
+t
+java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(´·ÁÏøÿÿÿÿ
+Q	java:S125+"<This block of commented-out lines of code should be removed.(È‡¶Ğ
+S	java:S106I"9Replace this use of System.out or System.err by a logger.(¶üÀ±ùÿÿÿÿ
+S	java:S106z"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(µ£Ô˜ùÿÿÿÿ8•’·—™.
