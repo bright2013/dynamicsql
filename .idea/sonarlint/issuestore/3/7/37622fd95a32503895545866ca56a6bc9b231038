@@ -1,13 +1,13 @@
 
-N	java:S106d"9Replace this use of System.out or System.err by a logger.(ê¾ú®
-S	java:S1063"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(µ£Ô˜ùÿÿÿÿ8•’·—™.
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
+S	java:S106J"9Replace this use of System.out or System.err by a logger.(¶üÀ±ùÿÿÿÿ
 h
-java:S1192E"SDefine a constant instead of duplicating this literal "com.itheima.mapper" 3 times.(çŠË
-S	java:S106"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
-M	java:S106K"9Replace this use of System.out or System.err by a logger.(ıÅË
+java:S1192F"SDefine a constant instead of duplicating this literal "com.itheima.mapper" 3 times.(çŠË
+N	java:S106e"9Replace this use of System.out or System.err by a logger.(ê¾ú®
+S	java:S106{"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
+M	java:S106L"9Replace this use of System.out or System.err by a logger.(ıÅË
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
+Q	java:S125,"<This block of commented-out lines of code should be removed.(È‡¶Ğ
 t
-java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(´·ÁÏøÿÿÿÿ
-Q	java:S125+"<This block of commented-out lines of code should be removed.(È‡¶Ğ
-S	java:S106I"9Replace this use of System.out or System.err by a logger.(¶üÀ±ùÿÿÿÿ
-S	java:S106z"9Replace this use of System.out or System.err by a logger.(¸‘ùêşÿÿÿÿ
-]	java:S125"<This block of commented-out lines of code should be removed.(µ£Ô˜ùÿÿÿÿ8•’·—™.
+java:S2293\"YReplace the type specification in this constructor call with the diamond operator ("<>").(´·ÁÏøÿÿÿÿ

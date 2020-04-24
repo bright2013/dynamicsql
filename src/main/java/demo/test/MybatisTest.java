@@ -1,12 +1,15 @@
 package demo.test;
 
 import demo.po.Customer;
+import demo.po.CustomerQuery;
 import demo.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MybatisTest {
     /**
@@ -67,7 +70,7 @@ public class MybatisTest {
         customer.setId(3);
         customer.setPhone("13311111234");
         // 执行SqlSession的更新方法，返回的是SQL语句影响的行数
-        int rows = sqlSession.update("com.itheima.mapper"
+        int rows = sqlSession.update("demo.mapper"
                 + ".CustomerMapper.updateCustomer", customer);
         // 通过返回结果判断更新操作是否执行成功
         if (rows > 0) {
@@ -93,7 +96,7 @@ public class MybatisTest {
         ids.add(1);
         ids.add(2);
         // 执行SqlSession的查询方法，返回结果集
-        List<Customer> customers = session.selectList("com.itheima.mapper"
+        List<Customer> customers = session.selectList("demo.mapper"
                 + ".CustomerMapper.findCustomerByIds", ids);
         // 输出查询结果信息
         for (Customer customer : customers) {
@@ -115,7 +118,7 @@ public class MybatisTest {
         Customer customer = new Customer();
         customer.setUsername("j");
         // 执行sqlSession的查询方法，返回结果集
-        List<Customer> customers = session.selectList("com.itheima.mapper"
+        List<Customer> customers = session.selectList("demo.mapper"
                 + ".CustomerMapper.findCustomerByName", customer);
         // 输出查询结果信息
         for (Customer customer2 : customers) {
@@ -123,6 +126,58 @@ public class MybatisTest {
             System.out.println(customer2);
         }
         // 关闭SqlSession
+        session.close();
+    }
+
+
+    /**
+     * FOREACH传入MAP
+     */
+    @Test
+    public void dynamicForeachMapTest() {
+        SqlSession session = MybatisUtils.getSession();
+
+        final List ids = new ArrayList();
+        ids.add(1);
+        ids.add(2);
+        ids.add(3);
+        ids.add(6);
+        ids.add(7);
+        ids.add(9);
+        CustomerQuery customerQuery = new CustomerQuery();
+        customerQuery.setIdList(ids);
+        List<Customer> customers = session.selectList("demo.mapper"
+                + ".CustomerMapper.dynamicForeachPojo", customerQuery);
+        for (Customer customer2 : customers) {
+            // 打印输出结果
+            System.out.println(customer2);
+        }
+        session.close();
+    }
+
+    /**
+     * FOREACH传入POJO
+     */
+    @Test
+    public void dynamicForeachPojoTest() {
+        SqlSession session = MybatisUtils.getSession();
+
+        final List ids = new ArrayList();
+        ids.add(1);
+        ids.add(2);
+        ids.add(3);
+        ids.add(6);
+        ids.add(7);
+        ids.add(9);
+        Map params = new HashMap();
+        params.put("ids", ids);
+        params.put("title", "中国");
+        List<Customer> customers = session.selectList("demo.mapper"
+                + ".CustomerMapper.dynamicForeachMap", params);
+        for (Customer customer2 : customers) {
+            // 打印输出结果
+            System.out.println(customer2);
+        }
         session.close();
     }
 

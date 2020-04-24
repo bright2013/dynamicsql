@@ -84,6 +84,23 @@
         </foreach>
     </select>
 
+    <!--<foreach>元素使用 -->
+    <select id="dynamicForeachMap" resultType="demo.po.Customer">
+        select * from t_customer where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+
+    <!--<foreach>元素使用 -->
+    <select id="dynamicForeachPojo" resultType="demo.po.Customer">
+        select * from t_customer where id in
+        <foreach collection="idList" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
     <!--<bind>元素的使用：根据客户名模糊查询客户信息 -->
     <select id="findCustomerByName" parameterType="demo.po.Customer"
             resultType="demo.po.Customer">
